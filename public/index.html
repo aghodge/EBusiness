@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LacedUp - Shoe Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <div class="logo">LacedUp</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="cart.html">Shopping Cart</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Find Your Perfect Pair of Shoes!</h1>
+      <p>Discover stylish, comfortable, and high-quality shoes for every occasion.</p>
+      
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section class="shop" id="shop">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="images\running.jpg" alt="Running Shoes">
+        <h3>Running Shoes</h3>
+        <p>$79.99</p>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images\jordans.jpg" alt="Street Wear Sneakers">
+        <h3>Street Wear Sneakers</h3>
+        <p>$129.99</p>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images\hiking.jpg" alt="Hiking Boots">
+        <h3>Hiking Boots</h3>
+        <p>$79.99</p>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images\heel.jpg" alt="Heels">
+        <h3>Heels</h3>
+        <p>$89.99</p>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images\boot.jpg" alt="Boots">
+        <h3>Boots</h3>
+        <p>$99.99</p>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="sandal.jpg" alt="Sandals">
+        <h3>Sandals</h3>
+        <p>$29.99</p>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="images\flipflop.jpg" alt="Flip Flops">
+        <h3>Flip Flops</h3>
+        <p>$19.99</p>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images\cowboy.jpg" alt="Cowboy Boots">
+        <h3>Cowboy Boots</h3>
+        <p>$199.99</p>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images\flat.jpg" alt="Flats">
+        <h3>Flats</h3>
+        <p>$25.99</p>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images\workboot.jpg" alt="Work Boots">
+        <h3>Work Boots</h3>
+        <p>$159.99</p>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About LacedUp</h2>
+    <p>At LacedUp, we are passionate about providing you with the best shoes for every occasion. Whether you're looking for sneakers, heels, or boots, we have something that will fit your style and budget. Our shoes are made with high-quality materials, ensuring that you get comfort, durability, and fashion all in one.</p>
+    <p>We believe in customer satisfaction, and our goal is to make your shopping experience seamless and enjoyable. From our wide variety of shoes to our 24/7 customer support, we’ve got you covered!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone Number: (864)-555-5555</p>
+    <p>Email: <a href="mailto:LacedUp23@yahoo.com">LacedUp23@yahoo.com</a></p>
+    <p>Customer Service Available 24/7</p>
+
+    <h3>Get In Touch</h3>
+    <form action="#" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="order-number">Order Number:</label>
+      <input type="text" id="order-number" name="order-number"><br>
+
+      <label for="comments">Comments:</label><br>
+      <textarea id="comments" name="comments" rows="4" required></textarea><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+ 
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 LacedUp Shoe Store</p>
+  </footer>
+
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".buy-button");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", function (event) {
+        const product = event.target.parentElement;
+        const name = product.querySelector("h3").innerText;
+        const price = parseFloat(product.querySelector("p").innerText.replace("$", ""));
+        
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name, price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        alert(name + " has been added to your cart!");
+      });
+    });
+  });
+</script>
+</html>
