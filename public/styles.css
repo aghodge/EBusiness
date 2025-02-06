@@ -1,0 +1,169 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and general styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+  }
+  
+  header {
+    background-color: #0073d8; /* Blue */
+    color: white;
+    padding: 1rem;
+  }
+  
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav ul li {
+    margin: 0 1rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #0073d8; /* Blue */
+    color: white;
+    text-align: center;
+    padding: 3rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero .cta-button {
+    padding: 0.7rem 2rem;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  
+  /* Shop Section */
+  .shop {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .product {
+    background-color: #f4f4f4;
+    border: 1px solid #0073d8;
+    padding: 1rem;
+    text-align: center;
+    width: 250px;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product h3 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .product p {
+    font-size: 1.1rem;
+    color: #0073d8; /* Blue */
+  }
+  
+  .buy-button {
+    padding: 0.7rem;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  
+  .buy-button:hover {
+    background-color: #0073d8; /* Blue */
+  }
+  
+  /* About Section */
+  .about {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    color: #0073d8; /* Blue */
+  }
+  
+  /* Contact Section */
+  .contact {
+    background-color: #0073d8; /* Blue */
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  .contact form {
+    margin-top: 1rem;
+  }
+  
+  .contact label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  .contact input, .contact textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .contact input[type="submit"] {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .contact input[type="submit"]:hover {
+    background-color: #0073d8; /* Blue */
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+  }
+  
